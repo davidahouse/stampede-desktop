@@ -1,0 +1,26 @@
+config:
+  projectFolder: .
+pullrequests:
+  tasks:
+    - id: pr-standards
+      config:
+        prMilestoneCheck: true
+        prIssueCheck: true
+    - id: swiftlint
+    - id: unit-tests-xcode
+      config:
+        scheme: Stampede
+        project: Stampede
+        xcodeVersion: Xcode.app
+pullrequestedit:
+  tasks:
+    - id: pr-standards
+      config:
+        prMilestoneCheck: true
+        prIssueCheck: true
+releases:
+  published:
+    tasks:
+      - id: release-notes
+      - id: build-macos-adhoc
+      
